@@ -229,10 +229,10 @@ One of the unexpected advantages I've found when following this framework is tha
 ### Further reading ###
 
 * Presentation - TDDing tmux
-..* [slides](https://speakerdeck.com/sethvargo/tdding-tmux)
-..* [video](http://www.youtube.com/watch?v=ZC91gZv-Uao)
+  * [slides](https://speakerdeck.com/sethvargo/tdding-tmux)
+  * [video](http://www.youtube.com/watch?v=ZC91gZv-Uao)
 * Presentation - [TDD for Ops](http://cwebberops.github.io/scale11x-tdd_for_ops/#/)
 * Presentation - Test Driven Development for Chef Practictioners
-..* [slides](http://www.slideshare.net/jimhopp/testdriven-development-for-chef-practitioners)
-..* [video](http://www.youtube.com/watch?v=o2e0aZUAVGw)
+  * [slides](http://www.slideshare.net/jimhopp/testdriven-development-for-chef-practitioners)
+  * [video](http://www.youtube.com/watch?v=o2e0aZUAVGw)
 * Book - [Test-Driven Infrastructure with Chef](http://shop.oreilly.com/product/0636920030973.do)
