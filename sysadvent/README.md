@@ -3,7 +3,7 @@ Day X - The Lazy SysAdmin's Guide to Test Driven Cookbooks
 
 This article assumes you have some knowledge of [Chef](http://www.opscode.com/chef/) and the [Berkshelf](http://berkshelf.com/) way of managing cookbooks. If you do not, then I highly recommend you watch the [Chefconf talk on 'The Berkshelf Way'](http://www.opscode.com/blog/chefconf-talks/the-berkshelf-way-jamie-winsor/) before reading further.
 
-What even is ?
+What even is?
 ----------------------
 
 ![I don't always test my code](test_code.jpg)
@@ -113,8 +113,7 @@ Tailor reads Ruby files and measures them against some common ruby style guides.
 
 ### knife test ###
 
-tests cookbook for syntax errors. this uses the built-in ruby syntax checking option for files in the cookbook ending in
-.rb, and the erb syntax check for files ending in .erb (templates). This comes free with `knife`.
+Tests cookbook for syntax errors. this uses the built-in ruby syntax checking option for files in the cookbook ending in .rb, and the erb syntax check for files ending in .erb (templates). This comes free with `knife`.
 
 ### [foodcritic](http://acrmp.github.io/foodcritic/) ###
 
@@ -230,10 +229,10 @@ One of the unexpected advantages I've found when following this framework is tha
 ### Further reading ###
 
 * Presentation - TDDing tmux
-* * [slides](https://speakerdeck.com/sethvargo/tdding-tmux)
-* * [video](http://www.youtube.com/watch?v=ZC91gZv-Uao)
+..* [slides](https://speakerdeck.com/sethvargo/tdding-tmux)
+..* [video](http://www.youtube.com/watch?v=ZC91gZv-Uao)
 * Presentation - [TDD for Ops](http://cwebberops.github.io/scale11x-tdd_for_ops/#/)
 * Presentation - Test Driven Development for Chef Practictioners
-* * [slides](http://www.slideshare.net/jimhopp/testdriven-development-for-chef-practitioners)
-* * [video](http://www.youtube.com/watch?v=o2e0aZUAVGw)
+..* [slides](http://www.slideshare.net/jimhopp/testdriven-development-for-chef-practitioners)
+..* [video](http://www.youtube.com/watch?v=o2e0aZUAVGw)
 * Book - [Test-Driven Infrastructure with Chef](http://shop.oreilly.com/product/0636920030973.do)
