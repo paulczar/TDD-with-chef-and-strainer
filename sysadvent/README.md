@@ -83,7 +83,7 @@ end
 Test Driven Development (TDD)
 ===================
 
-Now that we've documented our first stage of the cookbook we want to write some tests for it,  but first we need to set up the tooling.   Most of the tools in the testing framework that we're installing are rubygems and can quickly suck you into dependency hell.  To help deal with that and provide myself with some consistency I have created a Git repository called [meez](https://github.com/paulczar/meez) that contains my (very opinionated) skeleton cookbook and has a `Gemfile` and `Gemfile.lock` to help deal with the dependencies.  I also have base `Berksfile`, `Vagrantfile`, `Strainerfile` and I use `Ruby 1.9.3` as my default ruby environment.
+Now that we've documented our first stage of the cookbook we want to write some tests for it,  but first we need to set up the tooling.   Most of the tools in the testing framework that we're installing are rubygems and can quickly suck you into dependency hell.  To help deal with that and provide myself with some consistency I have created a Git repository called [meez](https://github.com/paulczar/meez) that contains my (very opinionated, and still very much under development) skeleton cookbook and has a `Gemfile` and `Gemfile.lock` to help deal with the dependencies.  I also have base `Berksfile`, `Vagrantfile`, `Strainerfile` and I use `Ruby 1.9.3` as my default ruby environment.
 
 With that skeleton in place I can get up to speed very quickly by cloning the repo and running `bundler`.
 
@@ -121,6 +121,19 @@ tests cookbook for syntax errors. this uses the built-in ruby syntax checking op
 Foodcritic is a linting tool for chef cookbooks.  It parses your cookbook and comments on your styling as well as flagging known problems that would cause chef to break when converging.  There is an excellent library of errors and Foodcritic will kindly provide an error code and often will even tell you how to fix it. 
 
 **Example:** [FC002: Avoid string interpolation where not required](http://acrmp.github.io/foodcritic/#FC002)
+
+### [rubocop](https://github.com/bbatsov/rubocop) ###
+
+I have just recently added this to my testing framework.   It is a very verbose lint / style parser for Ruby.  Prepare for it to yell at you a bunch when you start using it.
+
+### [guard](http://guardgem.org/) ###
+
+I'm not using this yet,  but it's a tool that watches files for changes and then runs commands against those files.  This will allow for real time feedback of changes to files.   Some potential uses for this that I plan to investigate are:
+
+* watch `Berksfile` and `metadata.rb` to automatically download any new cookbook dependencies.
+* watch `Gemfile` to automatically install any new Gem dependencies.
+* watch `*.rb` files to automatically check syntax/linting.
+
 
 ### [chefspec](http://sethvargo.com/chefspec/) ###
 
