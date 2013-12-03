@@ -111,7 +111,7 @@ chefspec: bundle exec rspec $SANDBOX/$COOKBOOK/spec
 
 Tailor reads Ruby files and measures them against some common ruby style guides. This is the tool that I'm least familiar with out of the set, but the framework I 'borrowed' from the stackforge cookbooks included it and I saw no reason to remove it.
 
-### knife test ###
+### knife cookbook test ###
 
 Tests cookbook for syntax errors. this uses the built-in ruby syntax checking option for files in the cookbook ending in .rb, and the erb syntax check for files ending in .erb (templates). This comes free with `knife`.
 
@@ -123,11 +123,11 @@ Foodcritic is a linting tool for chef cookbooks. It parses your cookbook and com
 
 ### [rubocop](https://github.com/bbatsov/rubocop) ###
 
-I have just recently added this to my testing framework.   It is a very verbose lint / style parser for Ruby.  Prepare for it to yell at you a bunch when you start using it.
+I have just recently added this to my testing framework. It is a very verbose lint / style parser for Ruby. Prepare for it to yell at you a bunch when you start using it.
 
 ### [guard](http://guardgem.org/) ###
 
-I'm not using this yet,  but it's a tool that watches files for changes and then runs commands against those files.  This will allow for real time feedback of changes to files.   Some potential uses for this that I plan to investigate are:
+I'm not using this yet, but it's a tool that watches files for changes and then runs commands against those files. This will allow for real time feedback of changes to files. Some potential uses for this that I plan to investigate are:
 
 * watch `Berksfile` and `metadata.rb` to automatically download any new cookbook dependencies.
 * watch `Gemfile` to automatically install any new Gem dependencies.
