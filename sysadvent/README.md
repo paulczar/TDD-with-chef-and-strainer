@@ -1,4 +1,4 @@
-Day X - The Lazy SysAdmin's Guide to Test Driven Cookbooks
+Day X - The Lazy SysAdmin's Guide to Test Driven Chef Cookbooks
 =====================================
 
 This article assumes you have some knowledge of [Chef](http://www.opscode.com/chef/) and the [Berkshelf](http://berkshelf.com/) way of managing cookbooks. If you do not, then I highly recommend you watch the [Chefconf talk on 'The Berkshelf Way'](http://www.opscode.com/blog/chefconf-talks/the-berkshelf-way-jamie-winsor/) before reading further.
@@ -6,9 +6,15 @@ This article assumes you have some knowledge of [Chef](http://www.opscode.com/ch
 What even is?
 ----------------------
 
+The Lazy Sysadmin is a person who is not lazy in the regular sense,  but is lazy in the sense that they don't want to do the same thing twice, or in this specific case they don't want to be woken up at two in the morning by PagerDuty (I hate that guy!) for an issue caused by a bug in a chef cookbook.
+
+A lot of config management code is tested briefly in Vagrant (if at all) by simply checking that it ran without an error and the service that you wrote the cookbook for is running. Maybe it spends a little while in a staging environment, but will often head to production with that minimum of testing.
+
 ![I don't always test my code](test_code.jpg)
 
-Test driven development (TDD) has been around for a long time and is heavily embraced in the Ruby developer community. The basic idea of it is to provide feedback to the developer as early as possibly as to whether their code is working via unit tests. In TDD the person writing the code often writes the [failing] unit test first, and then writes the code to make that test pass. There is also the concept of README Driven Development which is where you write the documentation even before that.
+We can borrow a methodology from the developer community called Test Driven Development which helps reduce the feedback loop to just a few seconds after writing code. This does mean some extra up front work but in my opinion the payoff makes it worth that investment.
+
+Test Driven Development (TDD) has been around for a long time and is heavily embraced in the Ruby developer community. The basic idea of it is to provide feedback to the developer as early as possibly as to whether their code is working via unit tests. In TDD the person writing the code often writes the [failing] unit test first, and then writes the code to make that test pass. There is also the concept of README Driven Development which is where you write the documentation even before that.
 
 This article explores some tooling such as `chefspec`, `foodcritic` and `strainer` to bring this style of testing to chef cookbooks. This method of writing cookbooks can feel very awkward at first, and `chefspec` especially can take a while to get the hang of it. We'll explore a few ways to help make that transition.
 
